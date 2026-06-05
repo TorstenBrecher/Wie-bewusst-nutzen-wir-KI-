@@ -15,54 +15,87 @@
     /* Navigation */
     nav {
       background: #111;
-      padding: 15px 30px;
-      display: flex;
-      gap: 30px;
-      position: sticky;
-      top: 0;
       border-bottom: 1px solid #333;
-      z-index: 10;
     }
 
-    nav a {
+    .menu {
+      list-style: none;
+      margin: 0;
+      padding: 0 30px;
+      display: flex;
+      gap: 40px;
+    }
+
+    .menu > li {
+      position: relative;
+    }
+
+    .menu > li > a {
       font-family: "Agency FB", Arial, sans-serif;
-      font-size: 22px;
+      font-size: 24px;
       color: #fff;
       text-decoration: none;
+      padding: 20px 0;
+      display: block;
       letter-spacing: 1px;
-      transition: 0.2s;
     }
 
-    nav a:hover {
+    .menu > li > a:hover {
       color: #00aaff;
     }
 
-    /* Titelbereich */
-    header {
-      text-align: center;
-      padding: 80px 20px 40px;
+    /* Dropdown */
+    .dropdown {
+      display: none;
+      position: absolute;
+      background: #111;
+      list-style: none;
+      padding: 10px 0;
+      margin: 0;
+      border: 1px solid #333;
+      width: 180px;
+      z-index: 10;
     }
 
-    header h1 {
+    .dropdown li a {
+      display: block;
+      padding: 10px 15px;
+      color: #fff;
+      font-family: Arial, sans-serif;
+      text-decoration: none;
+    }
+
+    .dropdown li a:hover {
+      background: #00aaff;
+    }
+
+    /* Dropdown anzeigen */
+    .menu li:hover .dropdown {
+      display: block;
+    }
+
+    /* Titel */
+    h1 {
       font-family: "Bauhaus 93", Arial, sans-serif;
       font-size: 70px;
-      color: #fff;
-      margin: 0;
+      text-align: center;
+      margin-top: 80px;
       letter-spacing: 2px;
     }
 
     header p {
+      text-align: center;
       font-size: 22px;
       color: #ccc;
-      margin-top: 10px;
+      margin-top: -10px;
     }
 
     /* Hauptbereich */
     main {
       max-width: 900px;
       margin: 40px auto;
-      padding: 20px;
       background: #111;
+      padding: 30px;
       border-radius: 10px;
       box-shadow: 0 0 20px rgba(0, 170, 255, 0.2);
     }
@@ -71,12 +104,6 @@
       color: #00aaff;
       font-family: Arial, sans-serif;
     }
-
-    img {
-      max-width: 100%;
-      border-radius: 8px;
-      margin: 20px 0;
-    }
   </style>
 </head>
 
@@ -84,40 +111,83 @@
 
   <!-- Navigation -->
   <nav>
-    <a href="#startseite">Startseite</a>
-    <a href="#umfrage">Umfrage</a>
-    <a href="#potenzial">Potenzial KI</a>
-    <a href="#oekologie">Ökologische Auswirkungen KI</a>
-    <a href="#quiz">Quiz</a>
-    <a href="#chatbot">Chatbot</a>
-    <a href="#quellen">Quellen</a>
+    <ul class="menu">
+
+      <li><a href="index.html">Startseite</a>
+        <ul class="dropdown">
+          <li><a href="#">Unterreiter 1</a></li>
+          <li><a href="#">Unterreiter 2</a></li>
+          <li><a href="#">Unterreiter 3</a></li>
+        </ul>
+      </li>
+
+      <li><a href="umfrage.html">Umfrage</a>
+        <ul class="dropdown">
+          <li><a href="#">Unterreiter 1</a></li>
+          <li><a href="#">Unterreiter 2</a></li>
+          <li><a href="#">Unterreiter 3</a></li>
+        </ul>
+      </li>
+
+      <li><a href="potenzial.html">Potenzial KI</a>
+        <ul class="dropdown">
+          <li><a href="#">Unterreiter 1</a></li>
+          <li><a href="#">Unterreiter 2</a></li>
+          <li><a href="#">Unterreiter 3</a></li>
+        </ul>
+      </li>
+
+      <li><a href="oekologie.html">Ökologische Auswirkungen KI</a>
+        <ul class="dropdown">
+          <li><a href="#">Unterreiter 1</a></li>
+          <li><a href="#">Unterreiter 2</a></li>
+          <li><a href="#">Unterreiter 3</a></li>
+        </ul>
+      </li>
+
+      <li><a href="quiz.html">Quiz</a>
+        <ul class="dropdown">
+          <li><a href="#">Unterreiter 1</a></li>
+          <li><a href="#">Unterreiter 2</a></li>
+          <li><a href="#">Unterreiter 3</a></li>
+        </ul>
+      </li>
+
+      <li><a href="chatbot.html">Chatbot</a>
+        <ul class="dropdown">
+          <li><a href="#">Unterreiter 1</a></li>
+          <li><a href="#">Unterreiter 2</a></li>
+          <li><a href="#">Unterreiter 3</a></li>
+        </ul>
+      </li>
+
+      <li><a href="quellen.html">Quellen</a>
+        <ul class="dropdown">
+          <li><a href="#">Unterreiter 1</a></li>
+          <li><a href="#">Unterreiter 2</a></li>
+          <li><a href="#">Unterreiter 3</a></li>
+        </ul>
+      </li>
+
+    </ul>
   </nav>
 
   <!-- Titelbereich -->
-  <header id="startseite">
+  <header>
     <h1>Künstliche Intelligenz</h1>
     <p>Ein Projekt über Chancen, Risiken und Auswirkungen von KI</p>
   </header>
 
-  <!-- Hauptinhalt -->
+  <!-- Inhalt -->
   <main>
-    <h2 id="umfrage">Umfrage</h2>
-    <p>Hier kommen deine Diagramme und Auswertungen hin.</p>
+    <h2>Umfrage</h2>
+    <p>Hier findest du die Auswertung meiner MS Forms Umfrage.</p>
 
-    <h2 id="potenzial">Potenzial von KI</h2>
-    <p>Hier beschreibst du die Chancen und Möglichkeiten von KI.</p>
+    <h2>Potenzial von KI</h2>
+    <p>Hier beschreibe ich die Chancen und Möglichkeiten von KI.</p>
 
-    <h2 id="oekologie">Ökologische Auswirkungen von KI</h2>
-    <p>Hier erklärst du die Umweltaspekte.</p>
-
-    <h2 id="quiz">Quiz</h2>
-    <p>Hier kannst du später ein Quiz einbauen.</p>
-
-    <h2 id="chatbot">Chatbot</h2>
-    <p>Hier kannst du deinen Chatbot einfügen.</p>
-
-    <h2 id="quellen">Quellen</h2>
-    <p>Hier kommen deine Quellenangaben hin.</p>
+    <h2>Ökologische Auswirkungen von KI</h2>
+    <p>Hier erkläre ich die Umweltaspekte von KI.</p>
   </main>
 
 </body>
