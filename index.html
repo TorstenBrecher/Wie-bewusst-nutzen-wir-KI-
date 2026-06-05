@@ -2,14 +2,14 @@
 <html lang="de">
 <head>
   <meta charset="UTF-8">
-  <title>KI-Projekt – Umfrage & Analyse</title>
+  <title>Startseite – KI Projekt</title>
 
   <style>
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
       background: #000;
       color: #fff;
+      font-family: Arial, sans-serif;
     }
 
     /* Navigation */
@@ -21,18 +21,40 @@
       position: sticky;
       top: 0;
       border-bottom: 1px solid #333;
+      z-index: 10;
     }
 
     nav a {
+      font-family: "Agency FB", Arial, sans-serif;
+      font-size: 22px;
       color: #fff;
       text-decoration: none;
-      font-size: 18px;
-      font-weight: 500;
+      letter-spacing: 1px;
       transition: 0.2s;
     }
 
     nav a:hover {
       color: #00aaff;
+    }
+
+    /* Titelbereich */
+    header {
+      text-align: center;
+      padding: 80px 20px 40px;
+    }
+
+    header h1 {
+      font-family: "Bauhaus 93", Arial, sans-serif;
+      font-size: 70px;
+      color: #fff;
+      margin: 0;
+      letter-spacing: 2px;
+    }
+
+    header p {
+      font-size: 22px;
+      color: #ccc;
+      margin-top: 10px;
     }
 
     /* Hauptbereich */
@@ -45,29 +67,15 @@
       box-shadow: 0 0 20px rgba(0, 170, 255, 0.2);
     }
 
-    h1, h2 {
+    h2 {
       color: #00aaff;
+      font-family: Arial, sans-serif;
     }
 
     img {
-      margin: 20px 0;
-      border-radius: 8px;
       max-width: 100%;
-    }
-
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 20px;
-    }
-
-    th, td {
-      border: 1px solid #333;
-      padding: 10px;
-    }
-
-    th {
-      background: #222;
+      border-radius: 8px;
+      margin: 20px 0;
     }
   </style>
 </head>
@@ -76,6 +84,7 @@
 
   <!-- Navigation -->
   <nav>
+    <a href="#startseite">Startseite</a>
     <a href="#umfrage">Umfrage</a>
     <a href="#potenzial">Potenzial KI</a>
     <a href="#oekologie">Ökologische Auswirkungen KI</a>
@@ -84,22 +93,22 @@
     <a href="#quellen">Quellen</a>
   </nav>
 
-  <!-- Inhalt -->
+  <!-- Titelbereich -->
+  <header id="startseite">
+    <h1>Künstliche Intelligenz</h1>
+    <p>Ein Projekt über Chancen, Risiken und Auswirkungen von KI</p>
+  </header>
+
+  <!-- Hauptinhalt -->
   <main>
-    <h1 id="umfrage">Umfrage – Auswertung</h1>
-    <p>Hier präsentiere ich die Ergebnisse meiner MS Forms Umfrage.</p>
-
-    <h2>Diagramm 1</h2>
-    <img src="diagramm1.png" alt="Diagramm 1">
-
-    <h2>Diagramm 2</h2>
-    <img src="diagramm2.png" alt="Diagramm 2">
+    <h2 id="umfrage">Umfrage</h2>
+    <p>Hier kommen deine Diagramme und Auswertungen hin.</p>
 
     <h2 id="potenzial">Potenzial von KI</h2>
-    <p>Hier kommt dein Text über Chancen und Potenziale von KI hin.</p>
+    <p>Hier beschreibst du die Chancen und Möglichkeiten von KI.</p>
 
     <h2 id="oekologie">Ökologische Auswirkungen von KI</h2>
-    <p>Hier erklärst du die Umweltaspekte von KI.</p>
+    <p>Hier erklärst du die Umweltaspekte.</p>
 
     <h2 id="quiz">Quiz</h2>
     <p>Hier kannst du später ein Quiz einbauen.</p>
@@ -109,7 +118,6 @@
 
     <h2 id="quellen">Quellen</h2>
     <p>Hier kommen deine Quellenangaben hin.</p>
-
   </main>
 
 </body>
